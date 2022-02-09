@@ -29,7 +29,12 @@ function generatePassword () {
     return "Please choose at least one option.";
   }
 
-  
+  var password = "";
+  for (var i = 0; i < passLength; i++){
+    var index = Math.floor(Math.random()*characters.length);
+    password+=characters[index];
+  }
+  return password;
 }
 
 // Get references to the #generate element
